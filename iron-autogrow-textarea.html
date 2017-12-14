@@ -305,7 +305,7 @@ Custom property | Description | Default
      */
     validate: function() {
       // Use the nested input's native validity.
-      var valid =  this.$.textarea.validity.valid;
+      var valid = this.$ ? this.$.textarea.validity.valid : true;
 
       // Only do extra checking if the browser thought this was valid.
       if (valid) {
